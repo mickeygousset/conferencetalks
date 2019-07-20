@@ -1,0 +1,111 @@
+# TO DO
+- Add Azure CLI Pipeline stuff
+
+# Build Pipelines Demo
+- Preset For Demo
+  - dev.azure.com/devopsmickey/kcdc-demo
+  - Turn on everything in Azure
+  - Open Visual Studio - Pull
+  - Open Visual Studio code - Pull
+- Run the app locally to show what we are working with
+  - Show about page that says replace me with a message
+  - Show the code, and the unit tests
+- Open kcdc-demo team project, explain team project, explain navigation on right, show repos
+- We are talking about CI right now, builds. Let's see how easy it is to create a build pipeline for our app
+  - New Pipeline
+  - Classic Editor - explain why
+  - Select Azure Repos Git
+  - Select ASP.NET template
+  - Change Agent Pool to Hosted Windows 2019 with VS 2019
+    - Agents
+      - Cross platform (Windows, Linux, MacOs)
+      - Execute “Jobs” (Build, deployment)
+      - Runs Tasks in Steps
+      - Build, tests, and/or deploys
+    - Microsoft Hosted (Hosted Build)
+      - Microsoft runs and manages the build agent
+      - SW preinstalled and updated regularly
+    - Self-Hosted (Private Build)
+      - You manage and run the machine
+  - Select solution to build
+  - Change the Job Name
+  - Under Build solution, look at MSBuild arguments, discuss what build variables are
+  - Rename the build pipeline
+  - Save the build - Show build folders
+  - queue the build - 
+  - While build is running
+    - First show job is running with the details
+    - Go back and edit the build and show the options at the top
+  - Go back into the build report.
+      - Show tests
+      - Show Commits
+      - Show linked work items
+      - Show published artifacts
+      - Drill into build report steps
+  - Let's break the build and use a private build server
+    - OPen the HomeControllerTest.cs and change the About match to have the word FAIL
+    - Save changes and commit them. Associate with 2392
+    - In Azure DevOps, go to Project Settings | Pipelines | Agent Pools
+    - Pool: On-Prem-Agents
+    - Open pipeline and change it to use hosted agent
+    -   Run the build again.  Build will fail this time.  Build number #20190701.2
+    -   Build failed. You can see 66% of the tests passed. Drill into testing
+    -   Select the failed test and see why it failed
+    -   Fix the test so it will pass and commit it, start build one more time
+  - Things to mention here:
+    - branch policies and builds
+    - build analytics - Show those
+
+
+# Release Pipelines Demo
+- Click new release pipeline button
+- Select Azure App Service Deployment with slot
+- Click Add Artifact and select the build created earlier
+- Click DEV stage
+  - Fill out basic fields in red
+  - Remove slot swap from DEV stage
+  - Deploy Azure App Service 
+    - Check XML Variable Substitution box
+  - Select Variables
+    - Add variable called "MoreAboutInfo" which matches what is in the web.config
+  - Clone the stage
+    - Change name to PROD
+    - Deploy Azure App Service - Check XML VAR Sub
+  - Change name of pipeline
+  - add a release gate to the pipeline for getting into prod - approval
+  - Create a release
+  - Show the release running
+  - While release is running, go back and show other gate options
+  - Approve the release and watch it continue running
+  - Pull up image of how we do releases in Azure DevOps to show something a little more complicated
+  - Show the website, both the DEV and PROD
+  - Discuss how deployments work, agents, deployment groups
+
+# YAML Pipeline demo
+  - First, discuss environments, and show them
+  - Open our build pipeline, and show how you can see the YAML.
+  - Discuss what a multi-stage pipeline is - currently in preview
+  - Creating new pipelines, default experience is to use YAML
+  - open azure-pipelines-one-file.yml in repos
+    - You can see this is just a file. I could edit it here if I wanted to.
+    - You can see that you kind of understand what is happening here
+  - create a new pipeline that uses this YAML file but don't finish it.
+    - One reason we aren't finishing it now is because you have to save and run
+  - Look at prebuild pipeline that uses this YAML file
+    - Edit the pipeline
+    - Show how you can add variables and triggers
+    - Delete teh nuget installer and readd it.
+    - Add display name to the task using the online editor
+    - Explain what you are seeing
+    - Run the build and show what it looks like
+  - Open multi-file build in VS Code
+    - Show how the multi-step file works (template keyword)
+    - Show intellicode
+    - add a script step
+    - Commit and see the build run
+
+# Github and Azure Pipelines Demo
+  - Benefits: open source projects get 10 free pipelines, all builds in one file
+  - Show how you add Azure Pipelines from the Github market place
+  - Show the work I've done on expressjs so far
+  - Show slides with some tips from our internal page
