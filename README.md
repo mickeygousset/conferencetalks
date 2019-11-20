@@ -3,6 +3,14 @@ This repo contains slide decks, cheat sheets, and source code for talks I've giv
 
 # 2019
 
+## Live360 Orlando - November 17-22, 2019
+* [VST03 - How Microsoft Does DevOps (Slides)](https://github.com/mickeygousset/conferencetalks/tree/master/2019/vs-live-orlando-2019/vst03-how-microsoft-does-devops.pptx)
+
+* [VSW11 - Feature Flags for Better DevOps (Slides)](https://github.com/mickeygousset/conferencetalks/tree/master/2019/vs-live-orlando-2019/vsw11-feature-flags-for-better-devops.pptx)
+
+* [Fast Focus - Top Ten Git Tips](https://github.com/mickeygousset/conferencetalks/tree/master/2019/vs-live-orlando-2019/fast-focus-top-ten-git-tips.md)
+
+
 ## Ottawa IT Community Meetup - October 23, 2019
 [Microsoft's Journey to adopt an Agile Mindset and DevOps culture](https://github.com/mickeygousset/conferencetalks/tree/master/2019/OttawaITCommunityMeetup)
 * [Slides](https://github.com/mickeygousset/conferencetalks/blob/master/2019/OttawaITCommunityMeetup/OurJourneytoDevOpsatMicrosoft-20191024.pptx)
