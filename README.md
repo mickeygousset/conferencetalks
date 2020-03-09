@@ -1,6 +1,19 @@
 # Mickey's Conference Talks
 This repo contains slide decks, cheat sheets, and source code for talks I've given.
 
+# 2020
+
+## [VSLive 2020 Las Vegas - March 1-6, 2020](https://vslive.com/Events/Las-Vegas-2020/Home.aspx)
+
+- [T03 - Build a DevOps Culture: Microsoft's Journey to Adopt an Agile Mindset and DevOps](https://github.com/mickeygousset/conferencetalks/tree/master/2020/vslive-lasvegas-march/Microsoft%20DevOps%20Journey%20and%20Growth%20Mindset)
+
+- [W13 - Fast Focus - Azure Pipelines Tips and Tricks](https://github.com/mickeygousset/conferencetalks/tree/master/2020/vslive-lasvegas-march/Fast%20Focus%20-%20Azure%20Pipelines%20Tips%20and%20Tricks)
+
+- [TH03 - Feature Flags for Better DevOps](https://github.com/mickeygousset/conferencetalks/tree/master/2020/vslive-lasvegas-march/Feature%20Flags%20for%20Better%20DevOps)
+
+---
+---
+
 # 2019
 
 ## Live360 Orlando - November 17-22, 2019
